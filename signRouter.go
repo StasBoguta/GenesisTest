@@ -44,6 +44,7 @@ func responseGenerator(w http.ResponseWriter, message string, statusCode int){
 		message,
 	}
 	js, _ := json.Marshal(response)
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(statusCode)
 	w.Write(js)
 }
@@ -80,6 +81,7 @@ func loginUser(w http.ResponseWriter, r *http.Request){
 	response := UserStatusResponse{
 		"Logged in",
 	}
+	w.Header().Set("Content-Type", "application/json")
 	js, _ := json.Marshal(response)
 	w.Write(js)
 }
