@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "705a3a00-6d72-430e-af22-5cd82e7fd5b9",
+		"name": "GenesisTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"login\":\"Stasss162@google.com\",\r\n    \"password\":\"4555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:10000/user/create",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"Stasss162@google.com\",\r\n    \"password\":\"4555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:10000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BtcRate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:10000/btcRate",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"btcRate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
