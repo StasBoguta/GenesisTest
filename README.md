@@ -39,4 +39,7 @@ cookies буде доданий токен авторизації.
 
 ## Курс біткоіну
 Курс біткоіну береться із відкритого API біржі Kuna https://docs.kuna.io/docs/getting-started .
-У програмі використовується запит GET на url https://api.kuna.io/v3/exchange-rates/bt
+У програмі використовується запит GET на url https://api.kuna.io/v3/exchange-rates/btc
+
+## Тестування
+Для тестування програми у репозиторії є файл GenesisTests.postman_collection.json - набір тестів у Postman
