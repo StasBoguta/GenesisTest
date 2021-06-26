@@ -4,12 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"time"
 )
 
 func getBtcRate(w http.ResponseWriter, r *http.Request){
 	cookies, _ := r.Cookie("token")
-	if cookies == nil || !cookies.Expires.Before(time.Now()){
+	if cookies == nil || !validateJwt(cookies.Value){
 		responseGenerator(w, "Unauthorized", 401)
 		return
 	}

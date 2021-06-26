@@ -69,7 +69,7 @@ func loginUser(w http.ResponseWriter, r *http.Request){
 		return
 	}
 
-	tokenString, expirationTime := generateJws(creds.Login)
+	tokenString, expirationTime := generateJwt(creds.Login)
 
 	http.SetCookie(w, &http.Cookie{
 		Name:    "token",
