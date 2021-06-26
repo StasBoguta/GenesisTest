@@ -14,12 +14,6 @@ type MyClaims struct {
 
 func generateJwt(login string) (string, time.Time){
 	expirationTime := time.Now().Add(5 * time.Minute)
-	//claims := &Claims{
-	//	Login: login,
-	//	StandardClaims: jwt.StandardClaims{
-	//		ExpiresAt: expirationTime.Unix(),
-	//	},
-	//}
 
 	claims := MyClaims{
 		login,
