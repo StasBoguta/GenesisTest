@@ -74,6 +74,7 @@ func loginUser(w http.ResponseWriter, r *http.Request){
 	http.SetCookie(w, &http.Cookie{
 		Name:    "token",
 		Value:   tokenString,
+		HttpOnly: true,
 		Expires: expirationTime,
 		Path: "/",
 	})
